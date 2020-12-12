@@ -1,30 +1,14 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Dockerfile                                         :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: jjourdan <jjourdan@student.42lyon.fr>      +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2020/12/10 13:48:55 by jjourdan          #+#    #+#              #
-#    Updated: 2020/12/11 19:08:20 by jjourdan         ###   ########lyon.fr    #
-#                                                                              #
-# **************************************************************************** #
-
 FROM debian:buster
 
-RUN apt-get -y update && apt-get -y upgrade && apt-get -y install mariadb-server \
-												wget \
-												php \
-												php-cli \
-												php-cgi \
-												php-mbstring \
-												php-fpm \
-												php-mysql \
-												nginx \
-												libnss3-tools
+RUN apt-get -y update && apt-get -y upgrade && apt-get -y install wget \
+																php7.3-fpm \
+																php7.3-mysql \
+																nginx \
+																mariadb-server \
+																vim
 
-COPY srcs ./root/
+COPY srcs ./tmp
 
-WORKDIR /root/
+WORKDIR /tmp/
 
 ENTRYPOINT ["bash", "serv_config.sh"]
