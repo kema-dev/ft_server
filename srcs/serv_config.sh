@@ -7,9 +7,9 @@ chown -R www-data /var/www/*
 chmod -R 755 /var/www/*
 echo -e "initial access granted"
 
-echo -e "adding basic index"
-mkdir /var/www/mysite && touch /var/www/mysite/index.php
-echo "<?php phpinfo(); ?>" >> /var/www/mysite/index.php
+echo -e "adding basic index ..."
+mkdir /var/www/mysite && touch /var/www/mysite/index.html
+cat /tmp/index.html >> /var/www/mysite/index.html
 echo -e "basic index added"
 
 echo -e "creating ssl certificate ..."
@@ -25,7 +25,7 @@ echo -e "nginx configurated"
 echo -e "configurating phpMyAdmin ..."
 mkdir /var/www/mysite/phpmyadmin
 cd /tmp/
-echo -e "getting phpMyAdmin source"
+echo -e "retrieving phpMyAdmin's source"
 wget https://files.phpmyadmin.net/phpMyAdmin/4.9.0.1/phpMyAdmin-4.9.0.1-all-languages.tar.gz &> /dev/null
 echo -e "phpMyAdmin source retrieved"
 tar -xvf phpMyAdmin-4.9.0.1-all-languages.tar.gz --strip-components 1 -C ../var/www/mysite/phpmyadmin &> /dev/null
@@ -43,7 +43,7 @@ echo "FLUSH PRIVILEGES;" | mysql -u root --skip-password
 echo -e "WordPress database created"
 
 echo -e "configurating WordPress ..."
-echo -e "getting WordPress source"
+echo -e "retrieving WordPress' source"
 wget -c https://wordpress.org/latest.tar.gz &> /dev/null
 echo -e "WordPress source retrieved"
 tar -xvzf latest.tar.gz &> /dev/null
