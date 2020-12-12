@@ -20,4 +20,10 @@ If you want to real-time print server logs :
 
 tail -f /var/log/nginx/access.log /var/log/nginx/error.log
 
+Useful sources :
+
+https://github.com/pmouhali/ft_server
+
+https://github.com/rchallie/ft_server
+
 My student address : jjourdan@student.42lyon.fr
