@@ -1,14 +1,4 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    README.md                                          :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: jjourdan <jjourdan@student.42lyon.fr>      +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2020/12/12 00:41:38 by jjourdan          #+#    #+#              #
-#             let's code !                            ###   ########lyon.fr    #
-#                                                                              #
-# **************************************************************************** #
+My 42 Lyon's ft_server project !
 
 Useful command to build and test :
 
@@ -29,3 +19,5 @@ done !
 If you want to real-time print server logs :
 
 tail -f /var/log/nginx/access.log /var/log/nginx/error.log
+
+My student address : jjourdan@student.42lyon.fr
