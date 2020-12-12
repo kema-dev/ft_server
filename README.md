@@ -23,3 +23,7 @@ If you want to remove autoindex :
 - service nginx status
 
 done !
+
+If you want to real-time print server logs :
+
+tail -f /var/log/nginx/access.log /var/log/nginx/error.log
