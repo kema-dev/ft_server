@@ -20,6 +20,8 @@ If you want to real-time print server logs :
 
 tail -f /var/log/nginx/access.log /var/log/nginx/error.log
 
+phpinfo available @ localhost/phpproof.php
+
 Useful sources :
 
 https://github.com/pmouhali/ft_server

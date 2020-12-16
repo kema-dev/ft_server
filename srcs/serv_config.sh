@@ -12,6 +12,11 @@ mkdir /var/www/mysite && touch /var/www/mysite/index.html
 cat /tmp/index.html >> /var/www/mysite/index.html
 echo -e "basic index added"
 
+echo -e "adding php proof ..."
+touch /var/www/mysite/phpproof.php
+echo "<?php phpinfo(); ?>" >> /var/www/mysite/phpproof.php
+echo -e "php proof added"
+
 echo -e "creating ssl certificate ..."
 openssl req -newkey rsa:4096 -x509 -sha256 -days 365 -nodes -out /etc/ssl/mysite.pem -keyout /etc/ssl/mysite.key -subj "/C=FR/ST=FRANCE/L=Lyon/O=42 School/OU=jjourdan/CN=mysite" &> /dev/null
 echo -e "ssl certificate created"
