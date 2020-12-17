@@ -3,7 +3,7 @@ echo -e "\nstarting server configuration ...\n"
 cd ..
 
 echo -e "granting initial access ..."
-chown -R www-data /var/www/*
+chown -R /var/www/*
 chmod -R 755 /var/www/*
 echo -e "initial access granted"
 
