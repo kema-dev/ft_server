@@ -1,3 +1,4 @@
+clear
 echo -e "\nstarting server configuration ...\n"
 
 cd ..
