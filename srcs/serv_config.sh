@@ -23,7 +23,8 @@ openssl req -newkey rsa:4096 -x509 -sha256 -days 365 -nodes -out /etc/ssl/mysite
 echo -e "ssl certificate created"
 
 echo -e "configurating nginx ..."
-mv ./tmp/nginx-conf /etc/nginx/sites-available/mysite
+rm -f /etc/nginx/sites-available/default
+mv ./tmp/nginx-conf-on /etc/nginx/sites-available/mysite
 ln -s /etc/nginx/sites-available/mysite /etc/nginx/sites-enabled/mysite
 rm -rf /etc/nginx/sites-enabled/default
 echo -e "nginx configurated"
