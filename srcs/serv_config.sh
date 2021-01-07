@@ -24,9 +24,9 @@ echo -e "ssl certificate created"
 
 echo -e "configurating nginx ..."
 rm -f /etc/nginx/sites-available/default
-mv ./tmp/nginx-conf-on /etc/nginx/sites-available/mysite
-ln -s /etc/nginx/sites-available/mysite /etc/nginx/sites-enabled/mysite
 rm -rf /etc/nginx/sites-enabled/default
+cp ./tmp/nginx-conf-off /etc/nginx/sites-available/mysite
+ln -s /etc/nginx/sites-available/mysite /etc/nginx/sites-enabled/mysite
 echo -e "nginx configurated"
 
 echo -e "configurating phpMyAdmin ..."
