@@ -1,4 +1,4 @@
-echo -e "\nstarting autoindex switch ...\n"
+echo "\nstarting autoindex switch ...\n"
 
 if cat /etc/nginx/sites-available/mysite | grep " on"
 	then cat /tmp/nginx-conf-off > /etc/nginx/sites-available/mysite
@@ -11,4 +11,4 @@ service nginx reload
 service nginx restart
 service nginx status
 
-echo -e "\nautoindex switch finished\n"
+echo "\nautoindex switch finished\n"

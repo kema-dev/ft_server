@@ -8,11 +8,7 @@ phpMyAdmin's default username is "root" and no password is required
 
 If you want to change autoindex mode :
 
-- vim /etc/nginx/sites-available/mysite/nginx.conf
-- replace autoindex "X" with "on" / "off" on line 21
-- service nginx reload
-- service nginx restart
-- service nginx status
+sh ~/../tmp/autoindex_switch.sh
 
 done !
 
