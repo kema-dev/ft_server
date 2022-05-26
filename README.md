@@ -1,7 +1,5 @@
 # ft_server
 
-## My 42 Lyon's ft_server
-
 This is a very basic introduction to [Docker](https://www.docker.com/)
 
 Full subject is available [here](/docs)
